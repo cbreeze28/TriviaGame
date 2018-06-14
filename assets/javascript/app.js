@@ -1,14 +1,14 @@
 var triviaQuestions = [{
-        question: "?",
-        answers: ["", "", "", ""],
+        question: "what color is the grass?",
+        answers: ["Blue", "Green", "Purple", "Red"],
         answer: 
 },{
-        question: "?",
-        answers: ["", "", "", "",],
+        question: "How many inches in a foot?",
+        answers: ["12", "11", "16", "10",],
         answer: 
 },{
-        question: "?",
-        answers: ["", "", "", "",],
+        question: "How many days are in a week?",
+        answers: ["5", "6", "7", "8",],
         answer:   
 }];
 
