@@ -1,3 +1,29 @@
-* {
-    
+#body {
+    background-image: url("../images/background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: gray;
+}
+#jumbotron1 {
+    font-size: 60px;
+    display: block;
+    background-image: url("../images/jumbotron-background.jpg");
+    background-color: black;
+    color: white;
+
+}
+#startButton {
+    background-color: black;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    padding: 20px 52px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: center;
+}
+
+#startButton:hover, .reset:hover {
+    background-color: lightsalmon;
+    color: black;
 }

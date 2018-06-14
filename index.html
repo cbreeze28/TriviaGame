@@ -1,2 +1,128 @@
 <!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trivia Game</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    
+</head>
+
+<body id="body">
+
+  <div class="container">
+
+    <!--Jumbotron -->
+    <div class="jumbotron" id="jumbotron1">
+      <div class="container">
+        <h1 class="text-center">
+          <strong>Trivia Game</strong>
+        </h1>
+      </div>
+    </div>
+    
+    <!--START BUTTON-->
+    <div class="row">
+        <div class="col-md-5">
+            <!--holding positioning-->
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" id="startButton">Start</button>
+        </div>
+
+        <div class="col-md-5">
+            <!--holding positioning-->
+        </div>
+    </div>
+
+    <!-- Instructions -->
+    <div class="row" id="instructionsTrivia">
+      <div class="col-md-12">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="card-title text-center">Instructions</h3>
+          </div>
+          <div class="card-body">
+            <p>
+              <small>TRIVIA!! You will be given a limited amount of time to answer several trivial questions. Once you press Start the timer will begin and the questions will be displayed. You may only choose one answer per question.
+                    The score of correct answers, wrong answers, and unanswered questions will be displayed after the time is up. Good luck!
+                    </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="container">
+    
+    <!--timer-->
+    <div class="col-md-3">
+      <div id="timeLeft"></div>
+    </div>
+    
+    <!--First Trivia Question-->
+    <div class="col-md-12">
+      <div class="question1"></div>
+    </div>
+
+
+
+
+    
+    <!--Scores and Crystals-->
+    <div class="row">
+
+      <!--Correct Answers-->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="card-title text-center">Correct Answers</h3>
+          </div>
+          <div class="card-body">
+            <h3 class="text-center" id="correct-answers"></h3>
+          </div>
+        </div>
+      </div>
+
+      <!--Wrong Answers-->
+      <div class="col-md-4">
+
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3 class="card-title text-center">Wrong Answers</h3>
+          </div>
+          <div class="card-body">
+            <h3 class="text-center" id="wrong-answers"></h3>
+          </div>
+        </div>
+      </div>
+
+        <!--Unanswered Questions-->
+        <div class="col-md-4">
+
+                <div class="card mb-4">
+                  <div class="card-header">
+                    <h3 class="card-title text-center">Unanswered Questions</h3>
+                  </div>
+                  <div class="card-body">
+                    <h3 class="text-center" id="unanswered-questions"></h3>
+                  </div>
+                </div>
+              </div>
+
+
+    </div>
+  </div>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Main Game Logic  -->
+  <script src="..javascript/app.js"></script>
+</body>
+
 </html>

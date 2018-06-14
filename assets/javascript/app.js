@@ -1,1 +1,3 @@
-//js and jquery
+$(document).ready(function() {
+    
+}
