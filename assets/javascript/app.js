@@ -1,5 +1,5 @@
 var quizSection = $('#triviaQuestions');
-var timerStartValue = 30;
+var timerStartValue = 10;
 
 //Buttons-on-click-function
 $(document).on('click', '#resetButton', function(refresh) {
@@ -11,7 +11,7 @@ $(document).on('click', '.answer-button', function(refresh) {
 });
 
 $(document).on('click', '#startButton', function(refresh) {
-  $('#timeElement').prepend('<h1>Time Remaining: <span id="stopWatch">30</span> Seconds!</h1>');
+  $('#timeElement').prepend('<h1>Time Remaining: <span id="stopWatch">10</span> Seconds!</h1>');
   $("#instructionsTrivia").hide();
   triviaGame.loadQuestion();
 });
