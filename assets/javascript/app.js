@@ -18,56 +18,55 @@ $(document).on('click', '#startButton', function(refresh) {
 
 //questions
 var questions = [{
-  question: "The ore bauzite is the chief commercial source of which element?",
+  question: 'The ore bauzite is the chief commercial source of which element?',
   answers: ["Aluminum", "Steel", "Bronze", "Iron"],
-  correctAnswer: "Aluminum",
+  correctAnswer: 'Aluminum',
 }, {
-    question: "What element are diamonds made of?",
+    question: 'What element are diamonds made of?',
     answers: ["Phosphorus", "Carbon", "Hydrogen", "Helium"],
-    correctAnswer: "Carbon",
+    correctAnswer: 'Carbon',
 }, {
-    question: "What was the first man-made satellite put into orbit?",
+    question: 'What was the first man-made satellite put into orbit?',
     answers: ["Kalpana-1", "Molniya", "Explorer 1", "Sputnik 1"],
-    correctAnswer: "Sputnik 1",
+    correctAnswer: 'Sputnik 1',
 }, {
-    question: "What animal has the highest blood pressure?",
+    question: 'What animal has the highest blood pressure?',
     answers: ["Elephant", "Giraffe", "Sperm Whale", "Hummingbird"],
-    correctAnswer: "Giraffe",
+    correctAnswer: 'Giraffe',
 },{
-    question: "How many hairs does the average human lose each day?",
+    question: 'How many hairs does the average human lose each day?',
     answers: ["10-40", "40-100", "100-150", "150-200"],
-    correctAnswer: "40-100",
+    correctAnswer: '40-100',
 },{
-    question: "What is a group of owls called?",
+    question: 'What is a group of owls called?',
     answers: ["Parliament", "Gang", "Flock", "Faction"],
-    correctAnswer: "Parliament",
+    correctAnswer: 'Parliament',
 },{
-    question: "What is the atomic number of the element Uranium?",
-    answers: ["90", "84", "98", "92"],
-    correctAnswer: "92",
+    //WHY WONT THE ANSWER WORK???!!!
+    question: 'What is the atomic number of the element Uranium?',
+    answers: ["ninety-two", "eighty-four", "ninety-eight", "ninety-four"],
+    correctAnswer: 'ninety-two',
 }, {
-    question: "Which planet was originally known as the Georgian Star?",
+    question: 'Which planet was originally known as the Georgian Star?',
     answers: ["Saturn", "Pluto", "Mars", "Uranus"],
-    correctAnswer: "Uranus",
+    correctAnswer: 'Uranus',
 }];
 
-
-//Add mroe questions above in said format
 
 
 var triviaGame = {
   questions:questions,
-  currentQuestion:0,
-  counter:timerStartValue,
-  correct:0,
-  incorrect:0,
+  currentQuestion: 0,
+  counter: timerStartValue,
+  correct: 0,
+  incorrect: 0,
   countdown: function(){
     triviaGame.counter--;
     $('#stopWatch').html(triviaGame.counter);
 
     if (triviaGame.counter === 0){
-      console.log("YOUR TIME IS UP!");
-      triviaGame.timeUp(), alert("YOUR TIME IS UP!");
+      console.log('YOUR TIME IS UP!');
+      triviaGame.timeUp(), alert('YOUR TIME IS UP!');
     }
   },
   loadQuestion: function(){
@@ -108,7 +107,7 @@ var triviaGame = {
   clicked: function(refresh) {
     clearInterval(timer);
 
-    if ($(refresh.target).data("name") === questions[this.currentQuestion].correctAnswer){
+    if ($(refresh.target).data('name') === questions[this.currentQuestion].correctAnswer){
       this.answeredCorrectly();
     } else {
       this.answeredIncorrectly();
