@@ -24,8 +24,7 @@
 }
 
 #startButton:hover, .reset:hover {
-    background-color: rgba(247, 0, 0, 0.4);
-    opacity: 0.4;
+    background-color: rgba(0, 16, 247, 0.4);
     color: black;
 }
 
@@ -41,7 +40,7 @@
 }
 
 #resetButton:hover, .reset:hover {
-    background-color: rgba(39, 197, 7, 0.4);
+    background-color: rgba(0, 16, 247, 0.4);
     color: black;
 }
 
@@ -51,12 +50,24 @@
     color: white;
     text-align: center;
 
-
-
 }
 
 #timeElement {
     font-size: 30px;
     color: red;
     background-color: black;
+}
+
+#cardID {
+    font-size: 36px;
+    background: transparent;
+    background-color: black;
+    color: white;
+}
+
+#instructionsTrivia {
+    font-size: 26px;
+    background-color: black;
+    color: white;
+    
 }

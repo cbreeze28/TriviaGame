@@ -18,7 +18,7 @@ $(document).on('click', '#startButton', function(refresh) {
 
 //questions
 var questions = [{
-  question: "what color is the grass?",
+  question: "What color is the grass?",
   answers: ["Blue", "Red", "Green", "Yellow"],
   correctAnswer: "Green",
 }];
@@ -38,7 +38,7 @@ var triviaGame = {
 
     if (triviaGame.counter === 0){
       console.log("YOUR TIME IS UP!");
-      triviaGame.timeUp();
+      triviaGame.timeUp(), alert("YOUR TIME IS UP!");
     }
   },
   loadQuestion: function(){
@@ -58,8 +58,8 @@ var triviaGame = {
     clearInterval(timer);
     $('#stopWatch').html(triviaGame.counter);
 
-    quizSection.html('<h2>Out of Time!</h2>');
-    quizSection.append('<h3>The Correct Answer was: ' + questions[this.currentQuestion].correctAnswer);
+    quizSection.html('<h2>You have run out of time!</h2>');
+    quizSection.append('<h3>The answer you should have chosen was: ' + questions[this.currentQuestion].correctAnswer);
     quizSection.append('<img src="' + questions[this.currentQuestion].image + '" />');
 
     if (triviaGame.currentQuestion === questions.length - 1){
@@ -71,12 +71,11 @@ var triviaGame = {
   results: function() {
     clearInterval(timer);
 
-    quizSection.html('<h2>All done, heres how you did!</h2>');
+    quizSection.html('<h2>Trivia Questions Completed, Results:</h2>');
     $('#stop-watch').html(triviaGame.counter);
     quizSection.append('<h3>Correct Answers: ' + triviaGame.correct + '</h3>');
     quizSection.append('<h3>Incorrect Answers: ' + triviaGame.incorrect + '</h3>');
     quizSection.append('<h3>Unanswered: ' + (questions.length - (triviaGame.incorrect + triviaGame.correct)) + '</h3>');
-    quizSection.append('<br><button id="start-over">Start Over?</button>');
   },
   clicked: function(refresh) {
     clearInterval(timer);
