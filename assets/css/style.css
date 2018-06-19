@@ -49,6 +49,7 @@
     background-color: black;
     color: white;
     text-align: center;
+    display: block;
 
 }
 
@@ -56,6 +57,7 @@
     font-size: 30px;
     color: red;
     background-color: black;
+    display: block;
 }
 
 #cardID {
@@ -63,11 +65,13 @@
     background: transparent;
     background-color: black;
     color: white;
+    display: block;
 }
 
 #instructionsTrivia {
     font-size: 26px;
     background-color: black;
     color: white;
-    
+    display: block;
+
 }

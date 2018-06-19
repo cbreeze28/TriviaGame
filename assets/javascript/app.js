@@ -21,8 +21,12 @@ var questions = [{
   question: "The ore bauzite is the chief commercial source of which element?",
   answers: ["Aluminum", "Steel", "Bronze", "Iron"],
   correctAnswer: "Aluminum",
-  img: "assets/images/ore.jpg"
+}, {
+    question: "The ore bauzite is the chief commercial source of which element?",
+    answers: ["Aluminum", "Steel", "Bronze", "Iron"],
+    correctAnswer: "Aluminum",
 }];
+
 
 //Add mroe questions above in said format
 
@@ -61,7 +65,6 @@ var triviaGame = {
 
     quizSection.html('<h2>You have run out of time!</h2>');
     quizSection.append('<h3>The answer you should have chosen was: ' + questions[this.currentQuestion].correctAnswer);
-    quizSection.append('<img src="' + questions[this.currentQuestion].image + '" />');
 
     if (triviaGame.currentQuestion === questions.length - 1){
       setTimeout(triviaGame.results, 3 * 1000);
@@ -92,7 +95,6 @@ var triviaGame = {
     clearInterval(timer);
     quizSection.html('<h2>Nope!</h2>');
     quizSection.append('<h3>The Correct Answer was: ' + questions[triviaGame.currentQuestion].correctAnswer + '</h3>');
-    quizSection.append('<img src="' + questions[triviaGame.currentQuestion].image + '" />');
 
     if (triviaGame.currentQuestion === questions.length - 1){
       setTimeout(triviaGame.results, 3 * 1000);
@@ -104,7 +106,6 @@ var triviaGame = {
     clearInterval(timer);
     triviaGame.correct++;
     quizSection.html('<h2>Correct!</h2>');
-    quizSection.append('<img src="' + questions[triviaGame.currentQuestion].image + '" />');
 
     if (triviaGame.currentQuestion === questions.length - 1){
       setTimeout(triviaGame.results, 3 * 1000);
