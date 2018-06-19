@@ -44,3 +44,19 @@
     background-color: rgba(39, 197, 7, 0.4);
     color: black;
 }
+
+#triviaQuestions {
+    font-size: 26px;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+
+
+}
+
+#timeElement {
+    font-size: 30px;
+    color: red;
+    background-color: black;
+}

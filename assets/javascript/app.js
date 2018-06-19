@@ -11,7 +11,7 @@ $(document).on('click', '.answer-button', function(refresh) {
 });
 
 $(document).on('click', '#startButton', function(refresh) {
-  $('#timeElement').append('<h1>Time Remaining: <span id="counter-number">30</span> Seconds</h1>');
+  $('#timeElement').prepend('<h1>Time Remaining: <span id="stopWatch">30</span> Seconds!</h1>');
   $("#instructionsTrivia").hide();
   triviaGame.loadQuestion();
 });
@@ -34,10 +34,10 @@ var triviaGame = {
   incorrect:0,
   countdown: function(){
     triviaGame.counter--;
-    $('#counter-number').html(triviaGame.counter);
+    $('#stopWatch').html(triviaGame.counter);
 
     if (triviaGame.counter === 0){
-      console.log('TIME UP');
+      console.log("YOUR TIME IS UP!");
       triviaGame.timeUp();
     }
   },
@@ -50,13 +50,13 @@ var triviaGame = {
   },
   nextQuestion: function(){
     triviaGame.counter = timerStartValue;
-    $('#counter-number').html(triviaGame.counter);
+    $('#stopWatch').html(triviaGame.counter);
     triviaGame.currentQuestion++;
     triviaGame.loadQuestion();
   },
   timeUp: function (){
     clearInterval(timer);
-    $('#counter-number').html(triviaGame.counter);
+    $('#stopWatch').html(triviaGame.counter);
 
     quizSection.html('<h2>Out of Time!</h2>');
     quizSection.append('<h3>The Correct Answer was: ' + questions[this.currentQuestion].correctAnswer);
@@ -72,7 +72,7 @@ var triviaGame = {
     clearInterval(timer);
 
     quizSection.html('<h2>All done, heres how you did!</h2>');
-    $('#counter-number').html(triviaGame.counter);
+    $('#stop-watch').html(triviaGame.counter);
     quizSection.append('<h3>Correct Answers: ' + triviaGame.correct + '</h3>');
     quizSection.append('<h3>Incorrect Answers: ' + triviaGame.incorrect + '</h3>');
     quizSection.append('<h3>Unanswered: ' + (questions.length - (triviaGame.incorrect + triviaGame.correct)) + '</h3>');
