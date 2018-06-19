@@ -22,9 +22,33 @@ var questions = [{
   answers: ["Aluminum", "Steel", "Bronze", "Iron"],
   correctAnswer: "Aluminum",
 }, {
-    question: "The ore bauzite is the chief commercial source of which element?",
-    answers: ["Aluminum", "Steel", "Bronze", "Iron"],
-    correctAnswer: "Aluminum",
+    question: "What element are diamonds made of?",
+    answers: ["Phosphorus", "Carbon", "Hydrogen", "Helium"],
+    correctAnswer: "Carbon",
+}, {
+    question: "What was the first man-made satellite put into orbit?",
+    answers: ["Kalpana-1", "Molniya", "Explorer 1", "Sputnik 1"],
+    correctAnswer: "Sputnik 1",
+}, {
+    question: "What animal has the highest blood pressure?",
+    answers: ["Elephant", "Giraffe", "Sperm Whale", "Hummingbird"],
+    correctAnswer: "Giraffe",
+},{
+    question: "How many hairs does the average human lose each day?",
+    answers: ["10-40", "40-100", "100-150", "150-200"],
+    correctAnswer: "40-100",
+},{
+    question: "What is a group of owls called?",
+    answers: ["Parliament", "Gang", "Flock", "Faction"],
+    correctAnswer: "Parliament",
+},{
+    question: "What is the atomic number of the element Uranium?",
+    answers: ["90", "84", "98", "92"],
+    correctAnswer: "92",
+}, {
+    question: "Which planet was originally known as the Georgian Star?",
+    answers: ["Saturn", "Pluto", "Mars", "Uranus"],
+    correctAnswer: "Uranus",
 }];
 
 
