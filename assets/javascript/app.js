@@ -85,14 +85,14 @@ var triviaGame = {
     clearInterval(timer);
     $('#stopWatch').html(triviaGame.counter);
 
-    quizSection.html('<h2>You have run out of time!</h2>');
-    quizSection.append('<h3>The answer you should have chosen was: ' + questions[this.currentQuestion].correctAnswer);
+    quizSection.html('<h2>Your out of time!</h2>');
+    quizSection.append('<h3>The answer is: ' + questions[this.currentQuestion].correctAnswer);
 
 
     if (triviaGame.currentQuestion === questions.length - 1){
-      setTimeout(triviaGame.results, 3 * 1000);
+      setTimeout(triviaGame.results, 2 * 1000);
     } else {
-      setTimeout(triviaGame.nextQuestion, 3 * 1000);
+      setTimeout(triviaGame.nextQuestion, 2 * 1000);
     }
   },
   results: function() {
@@ -116,8 +116,8 @@ var triviaGame = {
   answeredIncorrectly: function() {
     triviaGame.incorrect++;
     clearInterval(timer);
-    quizSection.html('<h2>Nope!</h2>');
-    quizSection.append('<h3>The Correct Answer was: ' + questions[triviaGame.currentQuestion].correctAnswer + '</h3>');
+    quizSection.html('<h2>Negative!</h2>');
+    quizSection.append('<h3>The answer is: ' + questions[triviaGame.currentQuestion].correctAnswer + '</h3>');
 
     if (triviaGame.currentQuestion === questions.length - 1){
       setTimeout(triviaGame.results, 3 * 1000);
