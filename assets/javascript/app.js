@@ -1,16 +1,16 @@
 var quizSection = $('#triviaQuestions');
 var timerStartValue = 30;
 
-//start button
-$(document).on('click', '#restartButton', function(renew) {
+//Buttons-on-click-function
+$(document).on('click', '#resetButton', function(refresh) {
   triviaGame.reset();
 });
 
-$(document).on('click', '.answer-button', function(renew) {
-  triviaGame.clicked(renew);
+$(document).on('click', '.answer-button', function(refresh) {
+  triviaGame.clicked(refresh);
 });
 
-$(document).on('click', '#startButton', function(renew) {
+$(document).on('click', '#startButton', function(refresh) {
   $('#timeElement').append('<h1>Time Remaining: <span id="counter-number">30</span> Seconds</h1>');
   $("#instructionsTrivia").hide();
   triviaGame.loadQuestion();
@@ -78,10 +78,10 @@ var triviaGame = {
     quizSection.append('<h3>Unanswered: ' + (questions.length - (triviaGame.incorrect + triviaGame.correct)) + '</h3>');
     quizSection.append('<br><button id="start-over">Start Over?</button>');
   },
-  clicked: function(renew) {
+  clicked: function(refresh) {
     clearInterval(timer);
 
-    if ($(renew.target).data("name") === questions[this.currentQuestion].correctAnswer){
+    if ($(refresh.target).data("name") === questions[this.currentQuestion].correctAnswer){
       this.answeredCorrectly();
     } else {
       this.answeredIncorrectly();
