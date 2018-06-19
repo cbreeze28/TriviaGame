@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/reset.css">
-    
 </head>
 
 <body id="body">
@@ -23,20 +22,6 @@
           <strong>Trivia Game</strong>
         </h1>
       </div>
-    </div>
-    
-    <!--START BUTTON-->
-    <div class="row">
-        <div class="col-md-5">
-            <!--holding positioning-->
-        </div>
-        <div class="col-md-2">
-            <button class="btn btn-primary" id="startButton">Start</button>
-        </div>
-
-        <div class="col-md-5">
-            <!--holding positioning-->
-        </div>
     </div>
 
     <!-- Instructions -->
@@ -55,82 +40,42 @@
           </div>
         </div>
       </div>
-    </div>
-
-  <div class="container">
+    </div> 
     
-    <!--timer-->
-    <div class="col-md-3">
-      <div class="card mb-4">
-      <div id="timeLeft"></div>
-      </div>
-    </div>
-    
-    <!--First Trivia Question-->
-    <div class="col-md-12">
-      <div class="card mb-4">
-      <div id="questions"></div>
-      <div class="question"></div>
-      <div class="answers"></div>
-      <div id="answer"></div>
-
-      </div>
-    </div>
-    
-  </div>
-
-
-
-
-    <!--Scores and Crystals-->
+    <!--START BUTTON-->
     <div class="row">
-
-      <!--Correct Answers-->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <div class="card-header">
-            <h3 class="card-title text-center">Correct Answers</h3>
-          </div>
-          <div class="card-body">
-            <h3 class="text-center" id="correctAnswers"></h3>
-          </div>
-        </div>
-      </div>
-
-      <!--Wrong Answers-->
-      <div class="col-md-4">
-
-        <div class="card mb-4">
-          <div class="card-header">
-            <h3 class="card-title text-center">Wrong Answers</h3>
-          </div>
-          <div class="card-body">
-            <h3 class="text-center" id="wrongAnswers"></h3>
-          </div>
-        </div>
-      </div>
-
-        <!--Unanswered Questions-->
         <div class="col-md-4">
+            <!--holding positioning-->
+        </div>
+        <div class="col-md-2">
+            <button class="btn btn-primary" id="startButton">Start</button>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary" id="resetButton">Reset</button>
+      </div>
 
-                <div class="card mb-4">
-                  <div class="card-header">
-                    <h3 class="card-title text-center">Unanswered Questions</h3>
-                  </div>
-                  <div class="card-body">
-                    <h3 class="text-center" id="unansweredQuestions"></h3>
-                  </div>
-                </div>
-              </div>
-
-
+        <div class="col-md-4">
+            <!--holding positioning-->
+        </div>
     </div>
-  </div>
 
+
+    <!--Trivia Question-->
+    <div class="col-md-12">
+      <div class="card mb-12">
+        <div class="card-header">
+          <h2 class="card-title text-center">Trivia</h2>
+            <div class="card mb-4 text-center" id="timeElement"></div>
+            <div id="triviaQuestions"></div>
+      </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
   <!-- JQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-  <!-- Main Game Logic  -->
   <script src="assets/javascript/app.js"></script>
 </body>
 
