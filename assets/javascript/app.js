@@ -87,8 +87,7 @@ var triviaGame = {
 
     quizSection.html('<h2>You have run out of time!</h2>');
     quizSection.append('<h3>The answer you should have chosen was: ' + questions[this.currentQuestion].correctAnswer);
-    triviaGame.nextQuestion();
-//above is where next question pulled if time runs out
+
 
     if (triviaGame.currentQuestion === questions.length - 1){
       setTimeout(triviaGame.results, 3 * 1000);
