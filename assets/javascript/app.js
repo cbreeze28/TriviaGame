@@ -18,9 +18,10 @@ $(document).on('click', '#startButton', function(refresh) {
 
 //questions
 var questions = [{
-  question: "What color is the grass?",
-  answers: ["Blue", "Red", "Green", "Yellow"],
-  correctAnswer: "Green",
+  question: "The ore bauzite is the chief commercial source of which element?",
+  answers: ["Aluminum", "Steel", "Bronze", "Iron"],
+  correctAnswer: "Aluminum",
+  img: "assets/images/ore.jpg"
 }];
 
 //Add mroe questions above in said format
